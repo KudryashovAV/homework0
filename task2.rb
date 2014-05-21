@@ -2,7 +2,7 @@
 # and returns the string "Hello, "
 # concatenated with the name.
 def hello(name)
-  raise "Not yet implemented"
+  "Hello, " + "name!"
 end
 
 # Takes a string
@@ -11,7 +11,14 @@ end
 # (For our purposes, a vowel is any of the A, E, I, O, U)
 # NOTE: be sure it works for both upper and lower case and for nonletters!
 def starts_with_vowel?(str)
-  raise "Not yet implemented"
+  n_of_v = [A, E, I, O, U, a, e, i, o, u]
+  for i in n_of_v
+    if str[0] = i
+      true
+    elsif str[0] = nil
+      "nonletters"
+    else false
+    end
 end
 
 # Takes a string
