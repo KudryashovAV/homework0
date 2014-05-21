@@ -2,8 +2,7 @@
 # and returns the sum of its elements.
 # For an empty array it should return zero.
 def sum(array)
-	array = [1, 2, 3, 4, 5]
-    array.inject(0){ |result, x| result + x }
+  array.reduce(0){ |result, x| result + x }
 end
 
 # Takes an array of integers as an argument
@@ -12,7 +11,7 @@ end
 # For an array with just one element,
 # it should return that element.
 def max_2_sum(array)
-  
+
  end
 
 
