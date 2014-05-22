@@ -17,18 +17,12 @@
 # that is, a price of 20 should display as "$20.00"
 # and a price of 33.8 should display as "$33.80".
 class BookInStock
-  def Book(isbn, price)
-  	@isbn, @price = isbn, price
+  def initialize(isbn, price)
+    @isbn, @price = isbn.to_s, price
+    raise ArgumentError if @isbn == nil || @price <= 0
   end
-  def isbn
-  	@isbn.to_s
-  	puts "ArgumentError" if @isbn.size == 0 
-  end
-  def price
-  	puts "ArgumentError" if @price <= 0
-  end 
   def price_as_string
-  	@price.to_s
+    sprintf("$%.2f", @price)
   end
 end
 
