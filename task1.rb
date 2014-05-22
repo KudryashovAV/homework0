@@ -11,19 +11,10 @@ end
 # For an array with just one element,
 # it should return that element.
 def max_2_sum(array)
-  if array.size == 0
-      return 0
-  end
-  for i in array
-    if array.size > 2
-      array -= [array.min]
-    elsif array.size == 2
-      return (array[0] + array[1])
-    else "Sorry, but you have a short array"
-    end
-  end
+  return 0 if array.size == 0
+  array -= [array.min] while array.size > 2
+  array[0] + array[1]
 end
-
 
 # DIFFICULT
 # Takes an array of integers
