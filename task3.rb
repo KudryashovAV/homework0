@@ -22,8 +22,13 @@ class BookInStock
   end
   def isbn
   	@isbn.to_s
+  	puts "ArgumentError" if @isbn.size == 0 
   end
   def price
-  	@price
+  	puts "ArgumentError" if @price <= 0
+  end 
+  def price_as_string
+  	@price.to_s
   end
 end
+
