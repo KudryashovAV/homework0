@@ -17,4 +17,13 @@
 # that is, a price of 20 should display as "$20.00"
 # and a price of 33.8 should display as "$33.80".
 class BookInStock
+  def Book(isbn, price)
+  	@isbn, @price = isbn, price
+  end
+  def isbn
+  	@isbn.to_s
+  end
+  def price
+  	@price
+  end
 end
