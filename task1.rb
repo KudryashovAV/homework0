@@ -30,6 +30,6 @@ def sum_to_n?(array, n)
     return true if (array[y] + array[x]) == n
     x + 1 and y + 1
   end
- end
+end
 
 
